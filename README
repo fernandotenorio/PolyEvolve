@@ -1,0 +1,74 @@
+Documentation
+-----------------
+PolyEvol tries to approximate a image by using a fixed number of semi-transparent
+polygons. You can change some parameters in the params.ini file, 
+but the default values should work well in most cases.
+This program was tested with javac 1.6.0_31.
+
+
+Version
+--------
+v1.0
+
+
+Running the program
+------------------------
+To run it, you must first compile the source code (the .java files) with
+javac EvolveDraw.java
+
+Then execute the main class with
+java EvolveDraw
+
+If you don't know how to compile the java source, the best way is to ask
+a friend, or you can Google 'compile java source'
+Good luck!
+
+
+Configuration
+-------------------
+The 'params.ini' file controls the behaviour of the application.
+In this file you can change the target image, the number of polygons used
+and a few other things.
+
+The left column holds the name of the parameter, the right column shows it's value.
+To change a parameter, just change the value on the right column and save the file.
+
+The listing below explains each parameter in detail:
+
+-vertices: A integer representing the number of vertices for each polygon. Of course this value
+should be greater than 2. Give it a value between 3 and 6 and you're ok. The more vertices
+you have, the slower the application will run.
+
+-n_poly: A integer representing the number of polygons to be used. You can play with this parameter, 
+but a small value (say 30) won't produce good results. A big value (say 300) will get a better approximation,
+but will take a greater time. It also depends on the complexity of your image - stick with values between
+50 and 100 and you're fine.
+
+-mutation_rate: A floating point number which controls how the polygons change ('mutate') along the algorithm.
+You can play with this parameter, but values between 0.001 and 0.1 should work well.
+
+-photo_interval: A snapshot of the current approximation will be taken at this interval rate (in seconds).
+
+-target_file: The image to approximate (must be a .jpg file)
+
+-randomize_start: A boolean value controlling the way the algorithm starts. 
+ If set to true, the algorithm with a random chromosome. If set to false, the algorithm starts with a 
+zeroed chromosome (a blank screen). In most cases, it's better to start with a random chromosome, that's why
+this parameter defaults to true.
+
+-min_alpha: A integer that sets the minimum 'alpha' value allowed in the polygon RGBA color. Must be less than
+max_alpha. To allow the maximum RGBA combinations, you can set it to 0. The default is 20.
+
+-max_alpha: A integer that sets the maximum 'alpha' value allowed in the polygon RGBA color. Must be greater than
+min_alpha. To allow the maximum RGBA combinations, you can set it to 255. The default is 80.
+
+
+Changes from previous version
+----------------------------------
+This is the first version.
+
+
+Contact
+---------
+You can contact at fnd.tenorio@gmail.com
+Any sugestions, bug reports or feedback is highly appreciated!
