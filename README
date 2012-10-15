@@ -3,7 +3,7 @@ Documentation
 PolyEvolve tries to approximate a image by using a fixed number of semi-transparent
 polygons. You can change some parameters in the params.ini file, 
 but the default values should work well in most cases.
-This program was tested with javac 1.6.0_31.
+This program was tested with JDK 1.6.0_31.
 
 Version
 --------
