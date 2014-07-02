@@ -1,8 +1,8 @@
 import java.awt.*;
+import javax.swing.*;
 import java.awt.event.*;
 import java.awt.image.*;
 import com.sun.image.codec.jpeg.*;
-import javax.swing.*;
 import java.util.concurrent.*;
 import java.util.*;
 import java.io.*;
